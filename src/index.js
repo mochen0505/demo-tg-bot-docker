@@ -16,7 +16,7 @@ bot.on('message', (msg) => {
   const botMsg = `说个几把 ${mention}`
 
   const target = "youtube";
-  if (userId !== myTgId && msg.text.toString().toLowerCase().includes(target)) {
+  if (myTgId !== `${userId}` && msg.text.toString().toLowerCase().includes(target)) {
     bot.sendMessage(cid, botMsg ,{parse_mode : "HTML"});
   }
 
